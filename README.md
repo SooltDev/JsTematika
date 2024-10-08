@@ -5,6 +5,7 @@
 - Mi is az a JavaScript?
 - A JavaScript eredete és felhasználási lehetőségei
 - JavaScript elhelyezése, importálása, betöltése egy HTML dokumentumban
+### Egy kis ízelitő
 - A programozás alapvető koncepciói
 - A JavaScript programozás alapjai
 - DOM Manipuláció
@@ -15,17 +16,17 @@
 >Ebben a részben elsajáítjuk a programozás alapjait. Ha ezt megérted, akkor a többi programnyelvvel is boldogulni fogsz, hiszen a logikája minden programnyelvek hasonló. Természetesen ezeken az órákon bemutatjuk a JavaScript programozás sajátosságait is.
 
 - Típusok, változó, állandok
-    - Primitívek - (egyszerű típusok, szöveg, szám, logikai...)
+    - Primitívek - (egyszerű típusok)
+        - Szám - `Number`
+        - Szöveg - `String`
+        - Logikai - `Boolean`
+        - undefined - `undefined`
+    - Összetett Adattípusok
+        - Tömbök
+        - Object, mint adattípus
 - Operátorok
 - Aritmetikai műveletek
 - A `Math` object
-- Sztringműveletek
-- Reguláris kifejezések
-- Összetett Adattípusok
-    - Tömbök
-        - Tömbműveletek
-    - Object, mint adattípus
-- A `Date` object, avagy dátumok a Javascriptben
 * #### Változók hatásköre
 * ####  Vezérlési szerkezetek
     * `function` - Függvények
@@ -40,12 +41,17 @@
             - `do while` - hátúl tesztelő ciklus
     * `try-catch-finaly` - hibakezelés, kivételkezelés
     * `arrow function` - nyílfüggvény, rövidített függvény. `ES6 szintaxis`
+- Tömbműveletek
+- Sztringműveletek
+- Reguláris kifejezések
+- A `Date` object, avagy dátumok a Javascriptben
+
 * Rekurzív függvények
 
 ## 3. `DOM` (Document Object Modell) 
 #### Javascript alkalmazása front-enden
 
-> Ebben a részben gyakorlatban alkalmazzuk azt, amit elméletben már megalapoztunk Hasznos, vagy szórakoztató mini-alkalmazásokat készítünk a weboldalunkra, például: időpont foglalás, ár kalkulátor, sorba rendezés játék, reakció tesztelő játék, quiz játék, és lottó-sorsolás szimulátor.
+> Ebben a részben gyakorlatban alkalmazzuk azt, amit elméletben már megalapoztunk Hasznos, vagy szórakoztató mini-alkalmazásokat készítünk a weboldalunkra, például: időpont foglalás, ár kalkulátor, sorba rendezés játék, reakció tesztelő játék, quiz játék, vagy lottó-sorsolás szimulátor.
 
 > [!WARNING]
 > Ebben a fejezetben, már szükség lesz az eddigi ismereteinkre.
@@ -123,7 +129,6 @@
 ***
 # 9. `Frontend Vizsga`
 ***
-
 # 10. `Backend`
 - Javascript a `backend` szemszögéből
 - `nodejs` környezet telepítése
