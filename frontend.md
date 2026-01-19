@@ -123,13 +123,16 @@ Vagy
 
 - Függvénytárak
     - Vezérlők készítése
+- `Closure` - Zárványok, Függvénygyárak: Olyan függvények, melyek "emlékeznek" környezetükre, A zárványon (ami szintén függvény) belül létrehozott változókra, ami kiemelten nagy adatbiztonságot jelent. A zárvány praméterihez, és a zárványon belül létrehozott változókhoz, csak a "Closure" által publikált függvényeken keresztül férhetünk hozzá.
 - `Module Pattern` - A moduláris programozás - mely segítségével lehetőségünk nyílik, a kódunk egyes részeit a többitől elkülöníteni, és függetleníteni. Ezzel lehetőségünk nyílik az egyes mechanizmusok szétválasztására, ami a kód átláthatóságát, karbantarthatóságát, és továbbfejleszthetőségét segíti elő. Nem utolsó sorban, egy modul nemcsak átláthatóságot, továbbfejleszthetőséget, és karbantarthatóságot biztosít, hanem mobilitást is, hiszen a modulok, projktről, projekre hordozhatóak, ami egy újabb fejlesztés produktivitását biztosítja.
-Beszélni fogunk:
+
+    Itt beszélni fogunk:
     - Hagyomásnyos függvény alapu modulokról
         - A felefedő modul modell
     - `ES6 modules` - A `module` mód - Aminek segítségével, Javascript állományok publikus interfészeit tudjuk egymásba ágyazni.
         - `export`
         - `import`
+    > Érdekesség: Voltaképpen minden modul egy `Closure` :) Csak egy kicsit más megközelítésben. 
 
 ## 5. A `document.cookie` - Sütik kezelése
 - Mik azok a sütik?
@@ -165,8 +168,6 @@ Beszélni fogunk:
 
 ## 8. `AJAX` - Asynchron Javascript And XML
 ### Adatok lekérése más szerveren lévő adatbázisból.
-
-> Itt egy gyakorlati példa erejéig egy nagyobb hangszer adatbázisból kérünk le hangszer adatokat. A böngészőből kéréseket küldünk a szerver felé, amelynek válaszát utána feldolgozzuk és megjelenítjük a felhasználónak. Ez újabb oldalletöltés nélkül megy végbe, `AJAX` felhasználásával.
 
 >[!NOTE]
 > Ebben a fejezetben nemcsak a programozásban való megvalósításáról lesz szó, hanem szó esik többek közt:
@@ -208,11 +209,11 @@ Ebben a fejezetben bepillantunk a javascript futtató környezetébe, abba a mec
 >[!NOTE]    
 > * Vizsga: 2,5 órás gyakorlati vizsga a végén
 >
-> * Beadandó: 
+> * Beadandó: időpontfoglaló rendszer
 >   - pontos leírást a kurzus végén ad az oktató
 >   - elkészítésére általában 3 hét áll rendelkezésre
 >   - választható nyelv: JavaScript vagy TypeScript
 >
 > * Tanfolyam közben: órai tesztek
 >
-> * Folytatás: a 15. hét után TypeScript modul, melynek végén külön vizsga van
+> * Folytatás: a 14. hét után TypeScript modul, melynek végén külön vizsga van
