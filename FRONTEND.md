@@ -79,9 +79,8 @@ Vagy
 - #### Referencia típusok:
     - Ebben a fejezetben újra csoportosítjuk az adattípusokat. Hiszen nem csak értékük alapján lehet őket csoportosítani, hanem egy adott típus, hozzárendelésben való működése alapján is. 
 - A `Date` object, avagy dátumok a Javascriptben
-- Az `Intl` - Internationalization API: A Javascript multikultija :) Amely lehetővé teszi a számok, dátumok és szövegek formázását, a világ különböző nyelvi és kulturális szabályai (úgynevezett locales) szerint.
+- Az `Intl` - Internationalization API: A Javascript multikultija :) Amely lehetővé teszi a számok, dátumok és szövegek formázását, a világ különböző nyelvi és kulturális szabályai (úgynevezett locales) szerint. Ahelyett, hogy külső könyvtárakat (például a régi Moment.js-t) használnál, az Intl segítségével natívan, gyorsan és memória-hatékonyan kezelheted a honosítást.
 
-Ahelyett, hogy külső könyvtárakat (például a régi Moment.js-t) használnál, az Intl segítségével natívan, gyorsan és memória-hatékonyan kezelheted a honosítást.
 ## 3. `DOM` (Document Object Modell) 
 #### Javascript alkalmazása front-enden
 
