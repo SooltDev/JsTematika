@@ -1,6 +1,8 @@
-# JsTematika
+# Javascript tematika
 
 ## 1. JavaScript `(ECMAScript, ES6)` alapok
+> [!NOTE]
+> Az `ES6` után több új szabvány is megkjelent, mégis, azért emeljük ki pont ezt a verziót, és nem valamelyik későbbit, mert ez volt a "nagy" vízválasztó, melyben nem csupán náhány függvénnyel, vagy osztályal bővült a Javascript, hanem olyan radikális változásokat hozott, mint a változók hatáskörének kibővítése vagy az OOP nagy átalakulása.
 
 - Mi is az a JavaScript?
 - A JavaScript eredete és felhasználási lehetőségei
@@ -13,23 +15,43 @@
 
 ## 2. A programozás alapjai `Javascript` nyelven
 > [!NOTE]
->Ebben a részben elsajáítjuk a programozás alapjait. Ha ezt megérted, akkor a többi programnyelvvel is boldogulni fogsz, hiszen a logikája minden programnyelvek hasonló. Természetesen ezeken az órákon bemutatjuk a JavaScript programozás sajátosságait is.
+>Ebben a részben elsajáítjuk a programozás alapjait. Ha ezt megérted, akkor a többi programnyelvvel is boldogulni fogsz, hiszen a logikája minden programozási nyelvnek hasonló. Természetesen ezeken az órákon bemutatjuk a JavaScript programozás sajátosságait is.
 
 - Típusok, változó, állandok
-    - Primitívek - (egyszerű típusok)
-        - Szám - `Number`
-        - Szöveg - `String`
-        - Logikai - `Boolean`
-        - undefined - `undefined`
-    - Összetett Adattípusok
-        - Tömbök
-        - Object, mint adattípus
-- Operátorok
-- Aritmetikai műveletek
-- A `Math` object
-* #### Változók hatásköre
+    - #### Típusok csoportosítása:
+        - Primitívek - (egyszerű típusok) melyek egyszerre csak egy adat tárolására alkalmasak
+            - Szám - `Number`
+                - Ide tartozik a `NaN` érték is, ami a Not a Number rövidítése. Tehát ez nem egy típus, hanem, egy érték.
+            - Szöveg - `String`
+            - Logikai - `Boolean`
+                - lehetséges értékei, a `true` és a `false`
+            - undefined - `undefined`
+                - Egyetlen értéket vehet fel, és ez az `undefined`
+        - Összetett Adattípusok, melyek egyszerre több adat tárolására alaklmasak
+            - Az Object, mint adattípus
+               - Array azaz Tömb: Fontos mehjegyezni, hogy Javascriptben, a tömb számára nincs külön adattípus. Az az Object-ből van származtatva, ám a gyakorlatban, úgy használjuk, mintha külön típus lenne.
+
+- Operátorok - Melyek műveleteket hajtanak végre, az operandusaik közt, és visszatérnek a művelet eredményével.
+
+    - Az Operátorokat csoportosíthatjuk operandusaik száma szerint:
+        - Egy operandusú `unary` 
+        - Két operandusú `binary`
+        - Három operandusú `thernary`
+Vagy 
+
+    - Az általa elvégzett művelet típusa szerint:
+        - Aritmetikai műveletek végző operátorok
+        - Hozzárendelő vagy értékadó operátorok
+        - Összehasonlító operátorok
+        - Logikai operátorok
+        - Léptető operátorok
+
+- Típuskonverzió - Gyakran van szükség arra, hogy egy változó értékét valami más típusú értékké alakítsuk át. Páldául, amikor egy szám szövegként van definiálva, ekkor ezt a szöveget, ami számot tartalmaz, át kell alakítani, számmá. Ez az átalakítás a típuskonverzió.
+- A `Math` object - A Math tartalmazza, a komplekszebb matematikai műveletek elvégzéséhez szükséges függvényeket, mint például a trigonometriai függvényeket, krekítéseket, vagy a gyökvonást és a konstans matematikai értékek is itt vannak tárolva, mint a PI érték. (Amolyan tudományos számológépként lehet használni)
+
 * ####  Vezérlési szerkezetek
-    * `function` - Függvények
+    * `function` - Függvények - Amelyek nem mások, mint programba írt programok, melyeket akárhányszor fel tudunk használni (futtatni) a programunkon belül. 
+       * `arrow function` - nyílfüggvény, rövidített függvény. `ES6 szintaxis`
     * `if-else` - feltételes mód
     * `switch-case` - szelekciós vezérlési szerkezet
     * #### Ciklusok - Iterációk
@@ -40,44 +62,99 @@
             - `while` - elől tesztelő ciklus
             - `do while` - hátúl tesztelő ciklus
     * `try-catch-finaly` - hibakezelés, kivételkezelés
-    * `arrow function` - nyílfüggvény, rövidített függvény. `ES6 szintaxis`
-- Tömbműveletek
-- Sztringműveletek
-- Reguláris kifejezések
-- A `Date` object, avagy dátumok a Javascriptben
+    
+* #### Változók hatásköre
+* #### Sztringműveletek
+    - Stringkezelő függvények
+* #### Reguláris kifejezések
 
-* Rekurzív függvények
+* #### Tömbműveletek:
+    - Tömbkezelő függvények
+    - A tömbök magasabb rendű függvényei
+- #### A Spread syntax, avagy a `...` (másoló) operátor:
+    - mely segítségével tömböket és objectecet tudunk ki és be csomagolni. Többek közt, lehetővé teszi két változó, harmadik változó ígénybevétele nélküli felcserélését.
+* #### Halmaz műveletek:
+    - A Set Object
+* #### Műveletek Object adattípussal
+- #### Referencia típusok:
+    - Ebben a fejezetben újra csoportosítjuk az adattípusokat. Hiszen nem csak értékük alapján lehet őket csoportosítani, hanem egy adott típus, hozzárendelésben való működése alapján is. 
+* #### A `Date` object, avagy dátumok a Javascriptben
 
 ## 3. `DOM` (Document Object Modell) 
 #### Javascript alkalmazása front-enden
 
-> Ebben a részben gyakorlatban alkalmazzuk azt, amit elméletben már megalapoztunk Hasznos, vagy szórakoztató mini-alkalmazásokat készítünk a weboldalunkra, például: időpont foglalás, ár kalkulátor, sorba rendezés játék, reakció tesztelő játék, quiz játék, vagy lottó-sorsolás szimulátor.
+> Ebben a részben gyakorlatban alkalmazzuk azt, amit elméletben már megalapoztunk Hasznos, vagy szórakoztató mini-alkalmazásokat készítünk a weboldalunkra.
 
 > [!WARNING]
 > Ebben a fejezetben, már szükség lesz az eddigi ismereteinkre.
 
-- `DOM` (Document Object Model) 
+- `DOM` (Document Object Model)
+    - DOM szerkezet
+    - Csomópontok (Node)
+        - Text
+        - HtmlElement
+    - a `document` object
     - DOM műveletek - HTML elemek manipulálása, Javascript segítségével
-    - Eseménykezelés
+        - a children és a childnode
+            - köztük levő különbség
+        - DOM kezelő függvények
+            - egy HTML elem elérése
+                - Hagyományos módszerrel, mint pl a `.getElementById`
+                - Modern módszer, avagy a `.querySelector` és a `.querySelectorAll`, melyek segítségével egy CSS selector alapján tudunk eg vagy akár több elemt kiválasztani.
+                  >[!NOTE] Többek közt ez az `ES6` újítás ásta alá a `jQuery` létjogosultságát, mert most már nem szükséges a jQuery használata a CSS selectorok alapján történő HTML elemek kiválasztásához.
+            - a `document` object-en keresztül elérhető függvények
+            - Egy Text, vagy HTMLElement csomóponton keresztül elérhető függvények
+        - A DOM, egy HTML elemre vonatkozó fontosabb attribútumai
+            - Ahol külömbséget teszünk a pusztán csomópont, és HTML csomópont viszonyítási pontok közt
+            - Stíluslap (style) kezelése
+        - Attribútumok kezelése
+        - Saját attríbútumok kezelése:
+            - A `dataset` 
+    - Eseménykezelés - mely keretén belül lehetőségünk van lekezelni, a HTML oldalon végbeneő eseményeket, mint az oldalbetöltés, egy billentyű lenyomása, vagy az egérkattintás.
+        - Két fajta eseménykezelés létezik:
+            - Attribútum típusú eseménykezelés
+            - EventTarget-en keresztül való eseménykezelés
+    - A `DocumentFragment` - avagy hogyan tudunk a memóriába HTML struktúrákat építeni anélkül, hogy az építés alatt, újra, meg újra újrarajzolná, s így újraszámolná a weboldal elrendezését a böngésző, anélkül, hogy sok fölösleges erőforrát pazarolnánk el. Sokkal optimálisabb futásidőt, és stabílabb működést biztosítva weboldalinknak.
+        - gyakorlati megvalósítás template element-en keresztül: például amikor egy webshop termékkártyáját hozzuk létre. A memóriába rakjuk össze, és, amikor teljesen kész van, hozzáaadjuk a dokumentumunkhoz.
 
 ## 4. Struktúrális programozás
+### Tervezési minták
 > Ahhoz, hogy a `3.` fejezetben elkezdett projekteket tovább tudjuk fejleszteni, szükségünk van arra a tudásra, melynek segítségével a kódjainkat, bizonyos modellek alapján rendszerezni, `strukturálni` tudjuk.
 
-- Függvénytárak
-    - Vezérlők készítése
-- `Module Pattern` - A moduláris programozás
-- `ES6 modules` - A `module` mód
-    - `export`
-    - `import`
+* #### Függvénytárak 
+    - Melyek segítségével elkerülhetjük, bonyolult `if` elágazások, vagy `switch` vezérlési szerkezetek írását. A szakirodalomban, kontextus függvényében, ezt több néven is illetik, mint például: `Function Dispatch Table - függvénykiosztási tábla` röviden, függvénytárak; Ha az OOP világába költöztetjük ezt a mintát, akkor ez a `Strategy Pattern (Stratégia tervezési minta)`; Vagy, ha összetettebb feladatok végzésére használjuk, akkor ez a `Command Pattern (Parancs minta)`.
+    Összeséégében ez nem más, mint a `Nyílt/Zárt elv (Open/Closed Principle)`: Ahol a kód nyitott a bővítésre, de zárt a módosításra. Mindenz, egy nagyon hatékony és teljesítményorientált kódot tesz lehetővé, mely futás ideje, konstans értékű így kiszámítható, ellentétben a bonyolult, és hosszú switch vezérlési szerkezeteknél, melyek hatékonysága abban rejlik, hogy az adott ág, hól helyezkedik el a kódon belül.
+        - Vezérlők készítése
+* #### A `Closure` és az `Encapsulation` - Zárványok, Függvénygyárak
+    - Olyan függvények, melyek "emlékeznek" környezetükre azután is, hogy az őt létrehozó függvény befejezte futását. Ez kiemelten nagy adatbiztonságot jelent. Más szóval: A zárványt létrehozó függvény  praméterihez, és a benne létrehozott változókhoz, csak a zárványokon (Closure) keresztül férhetünk hozzá. Ez az `Encapsulation`
+    
 
-## 5. `Form Validation` - Űrlapok ellenőrzése
+* #### `Module Pattern` 
+    - A moduláris programozás - mely segítségével lehetőségünk nyílik, a kódunk egyes részeit a többitől elkülöníteni, és függetleníteni. Ezzel lehetőségünk nyílik az egyes mechanizmusok szétválasztására, ami a kód átláthatóságát, karbantarthatóságát, és továbbfejleszthetőségét segíti elő. Nem utolsó sorban, egy modul nemcsak átláthatóságot, továbbfejleszthetőséget, és karbantarthatóságot biztosít, hanem mobilitást is, hiszen a modulok, projktről, projekre hordozhatóak, ami egy újabb fejlesztés produktivitását biztosítja.
+
+    Itt beszélni fogunk:
+    - Hagyomásnyos függvény alapu modulokról
+            - A felefedő modul modell
+        - `ES6 modules` - A `module` mód - Aminek segítségével, Javascript állományok publikus interfészeit tudjuk egymásba ágyazni.
+            - `export`
+            - `import`
+    >Érdekesség: Voltaképpen minden modul egy Closure :) Csak egy kicsit más megközelítésben.
+## 5. A `document.cookie` - Sütik kezelése
+- Mik azok a sütik?
+- Mire használhatjuk a sütiket? (Mire valóak egyáltalán)
+#### Egy komplett `cookie` modul építése
+> A `cookie` modul építése közben, átismételjük, és gyakoroljuk a modulos programozást, miközben megtapasztaljuk azok előnyeit, és nagyszerűségét, egy hasznos gyakoralti példa keretén belül.
+#### A `localStorage`
+- külömbségek, a `document.cookie`-val szemben
+
+## 6. `Form Validation` - Űrlapok ellenőrzése
 >[!NOTE]
 > Ebben a fejezetben, Egy összetett, gyakorlati, és a mindennapi programozásban, igen hasznos példán keresztül nézzük meg, mindazt, amit eddig tanultuk.
 
 > Az eddigiekben Javascript nélkül elküldtük a kitöltött űrlapot vagy kérdőívet, és majd kiderült, hogy az jó, vagy hiba van benne. Viszont a böngészőben futó Javascript segítségével, szabályokat határozhatunk meg a felhasználó számára, és csak ezen szabályok mentén tesszük számára lehetővé az űrlap elküldését.
 > Ilyen szabályok például: helyes email formátum, karakterszámra vonatkozó megkötések, bizonyos mezők kötelező kitöltése, stb.
 
-## 6. Programozási Paradigmák
+## 7. Programozási Paradigmák
 ### `OOP` - Objektum Orientált Programozás
 
 > Egy olyan programozási paradigma, mely az életből vett mintákra alapszik, és ahol egy objektumnak, egyaránt vannak tulajdonságai, és funkcionalitásai is. Segítségével, egész, működési mechanizmusokat hozhatunk létre, melyeket ezután példányosíthatunk.
@@ -94,7 +171,7 @@
 - A `OOP` és a `DOM`
 - ##### Gyakorlati példák, feladatok megvalósítása OOP-vel
 
-## 7. `AJAX` - Asynchron Javascript And XML
+## 8. `AJAX` - Asynchron Javascript And XML
 ### Adatok lekérése más szerveren lévő adatbázisból.
 
 > Itt egy gyakorlati példa erejéig egy nagyobb hangszer adatbázisból kérünk le hangszer adatokat. A böngészőből kéréseket küldünk a szerver felé, amelynek válaszát utána feldolgozzuk és megjelenítjük a felhasználónak. Ez újabb oldalletöltés nélkül megy végbe, `AJAX` felhasználásával.
@@ -113,85 +190,37 @@
     - Válasz fogadása és feldolgozása és megjelenítése
 - `JSON` - (JavaScript Object Notation, JavaScript objektumjelölés)
     - Javascript nyelven alapuló, olvasható adastruktúra, melyet többek közt, kliens-szerver közti adatcsere megvalósítására használunk.
+    - A `JSON` függvényei:
+        - `parse` - mely segítségével a szövegként érkezett JSON adatstruktúrát használható formára hozzuk.
+        - `stringify` - mely segítségével szöveggé alakítjuk a JSON-t. Ebben a formában tudjuk tartósan tárolni, vagy akár egy kérésben a szerver felé továbbítani.
 - a `Promise` - Mint igéret, melyet 2 forgatókönyv jellemez.
     - Mi történjen akkor, ha az ígéretet sikerült teljesíteni
     - Mi történjen akkor, ha az ígéret nem teljesült.
 - A `Fetch` API - Ami egy `Promise` alapú kérés kezdeményezését teszi lehetővé.
 
-## 8. A `document.cookie` - Sütik kezelése
-- Mik azok a sütik?
-- Mire használhatjuk a sütiket? (Mire valóak egyáltalán)
-#### Egy komplett `cookie` modul építése
-> A `cookie` modul építése közben, átismételjük, és gyakoroljuk a modulos programozást, miközben megtapasztaljuk azok előnyeit, és nagyszerűségét, egy hasznos gyakoralti példa keretén belül.
-#### A `localStorage`
-- külömbségek, a `document.cookie`-val szemben
+# 9. `Optimalizálás`
+Ebben a fejezetben bepillantunk a javascript futtató környezetébe, abba a mechanizmusban, ahogy a Javascript sorba állítja az épp futásra váró proceszeket. Mivel a Javascript egy szálon fut, előfordulhat, hogy beragad egy-egy hoszabban tartó függvény, vagy ciklus, amit egy helyes optimalizálással, ki tudunk küszöbölni.
+
+- `EventLoop` - ez a mechanizmus felel, azért, hogy a futásra várakozó proceszek, sorban le is fussanak.
+- Optimalizálás `EventLoop` segítségével
+
+# 10. `PWA - Progressive Web Application`
+* A `PWA` nem más, mint olyan böbgészőben futtatható `HTML+CSS+Javascript` alkalmazások, melyeket eszközünkre (PC, Laptop, Tablet, Telefon,...) telepíthetünk. Az így telepített alkalmazások offline is elérhetőek lesznek, mint bármilyen más telepített alkalmazás az eszközünkön.
 
 ***
-# 9. `Frontend Vizsga`
+* Rekurzív függvények
+
 ***
-# 10. `Backend`
-- Javascript a `backend` szemszögéből
-- `nodejs` környezet telepítése
-- `Javascript` futtatása `nodejs` környezetben
+# 11. `Frontend Vizsga`
 
-### Az `npm` - Node Package Manager
-- A node csomagokról úgy általában
-    - `npm init` - új `node` projekt létrehozása, és inicializálása
-    - `npm install` - csomagok telepítése
-
-### A `http` package
-- A `createServer` - Szerver létrehozása
-- Kérések kezelés - `request`
-    - a `method` attríbutum - Típusai, melyiket mikor használjuk
-- Válasz küldése - `response`
-#### Az `fs` (file system) package
-- `.readFile` Állományok beolvasása, és tartalmuk válaszként való küldése
-- `.writeFile` Állományok írása
-#### Egy komplett weboldal betöltése `http` package segítségével
-- válaszfejlécek létrehozása
-- megfelelő `Content-Type` létrehozása, a betöltendő adat/fájl `MIME` típusának megfelelően, a válasz megfeleő kezelésének érdekében.
-
-### az `express` package
- - `middleware` - köztes program
-    - Mik azok a köztes programok
-    - Köztes programopk használata, express-ben
-    - Saját `middleware` definiálása és hasnzálata
-- Az `express` beépített köztes programjai
-
-- Weboldal építése `express` segítségével
-- metódusfüggvények
-    - kérések és válaszok kezelése metódusfüggvényekkel
-    - metódusfüggvények, és a `middleware`
-- Statikus weboldal betöltése `express` segítségével
-    - `express.static(path) - middleware` használatával, egy statikus könyvtár kiszolgálása
-
-## A `CRUD` API megvalósítása
-> [!NOTE]
-> A `CRUD` api rövidítés, a
-> - `C`reate
-> - `R`ead
-> - `U`pdate
-> - `D`elete
+>[!NOTE]    
+> * Vizsga: 2,5 órás gyakorlati vizsga a végén
 >
-> Szavak kezdőbetűjéből tevődik össze. 
-
-Ebben a fejezetben, ezen funkcionalitások, gyakorlati megvalósításával fogunk foglalkozni, melyekkel a kis Hangszerárúházunkat fogjuk kibővíteni.
-
-Itt lehetőségünk nyílik:
-- új hangszerek bevitelére 
-- szerkesztésére, 
-- és törlésére is.
-
-## `Login` felület építése
->[!NOTE]
-> A felület építése közben, az alábbi csomagokkal ismerkedhetünk meg:
-> - `dotenv` - a `.env` konfigurációs fájl használatára
-> - `bcrypt` - a `hash` kódok elkészítésére
-> - `jsonwetoken` - a `token` alapú aláírás elkészítésére, és hitelesítésére
-> - `cookie-parser` - a sütik gyors kezelésére
+> * Beadandó: időpontfoglaló rendszer
+>   - pontos leírást a kurzus végén ad az oktató
+>   - elkészítésére általában 3 hét áll rendelkezésre
+>   - választható nyelv: JavaScript vagy TypeScript
 >
-
-A felület rendelkezni fog egy védett oldalla, melyet csak abból a böngészőből lehet majd elérni, ahonnan bejelentkeztek, és akkor ha a böngészőben még nem járt le a `token` "szavatossága"
-
-***
-# 11. `Backend vizsga`
+> * Tanfolyam közben: órai tesztek
+>
+> * Folytatás: a 14. hét után TypeScript modul, melynek végén külön vizsga van
