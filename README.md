@@ -117,7 +117,8 @@
             - Attribútum típusú eseménykezelés; - Amelyekkel főleg ES5 vagy régebbi szintaxisú JS kódban találkozhatunk. 
             - EventTarget-en keresztül való eseménykezelés, a Javascript modern eseménykezelője.
     - A `DocumentFragment` - avagy hogyan tudunk a memóriába HTML struktúrákat építeni anélkül, hogy az építés alatt, újra, meg újra újrarajzolná, s így újraszámolná a weboldal elrendezését a böngésző, anélkül, hogy sok fölösleges erőforrát pazarolnánk el. Sokkal optimálisabb futásidőt, és stabílabb működést biztosítva weboldalinknak.
-    > gyakorlati megvalósítás `template` element-en keresztül: például amikor egy webshop termékkártyáját hozzuk létre. A memóriába rakjuk össze, és, amikor teljesen kész van, hozzáaadjuk a dokumentumunkhoz. Így csak egyszer rajzolja újra az aktuális HTML dokumentumot.
+        > gyakorlati megvalósítás `template` element-en keresztül: például amikor egy webshop termékkártyáját hozzuk létre. A memóriába rakjuk össze, és, amikor teljesen kész van, hozzáaadjuk a dokumentumunkhoz. Így csak egyszer rajzolja újra az aktuális HTML dokumentumot.
+
 
 ## 4. Struktúrális programozás
 ### Tervezési minták
@@ -143,7 +144,12 @@
     - `ES6 modules` - A `module` mód - Aminek segítségével, Javascript állományok publikus interfészeit tudjuk egymásba ágyazni.
             - `export`
             - `import`
-    >Érdekesség: Voltaképpen minden modul egy Closure :) Csak egy kicsit más megközelítésben.
+        >Érdekesség: Voltaképpen minden modul egy Closure :) Csak egy kicsit más megközelítésben.
+
+    > [!INFO] Ebben a fejezetben saját modulokat építünk, melyeket beépítünk a HTML dokumentumunkban. Mint például egy szövegdoboz, vagy egy saját alert ablak, melyek segítségével a legmodernebb lehetőségekkel ismerkedhetünk meg a gyakorlatban.
+    - __A `CSSStyleSheet` osztály__- Lehetőséget teremt teljes stíluslapok memóriában való kezelésére, anélkül, hogy újabb HTML tagként `<link rel="styleshhet" href="style.css">` hozzá kéne adjuk a HTML `head` részéhez.
+        - `css` adoptálása - memóriához való hozzárendelése
+
 ## 5. A `document.cookie` - Sütik kezelése
 - Mik azok a sütik?
 - Mire használhatjuk a sütiket? (Mire valóak egyáltalán)
@@ -199,6 +205,7 @@
     - A `JSON` függvényei:
         - `parse` - mely segítségével a szövegként érkezett JSON adatstruktúrát használható formára hozzuk.
         - `stringify` - mely segítségével szöveggé alakítjuk a JSON-t. Ebben a formában tudjuk tartósan tárolni, vagy akár egy kérésben a szerver felé továbbítani.
+    - `JSON` importálása `ES6` modulba: - Adatok egyszerű betöltése, akár távoli szerverről is.
 - a `Promise` - Mint igéret, melyet 2 forgatókönyv jellemez.
     > Amire szükség van a modern Javascript alapú programozásban, már csak annál az aprócska ténynél is fogva, hogy megértsük a `fetch` api tényleges működését, hiszen a `fetch` is egy `Promise`-al tér vissza.
     - __A promis két forgatókönyvet valósít meg:__
