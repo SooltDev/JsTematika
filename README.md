@@ -17,9 +17,9 @@
 > [!NOTE]
 >Ebben a részben elsajáítjuk a programozás alapjait. Ha ezt megérted, akkor a többi programnyelvvel is boldogulni fogsz, hiszen a logikája minden programozási nyelvnek hasonló. Természetesen ezeken az órákon a Javascript szemszögéből.
 
-- Típusok, változó, állandok
-    - ### Típusok csoportosítása:
-        - Primitívek - (egyszerű típusok) melyek egyszerre csak egy adat tárolására alkalmasak
+- ### Típusok, változó, állandok
+    - __Típusok csoportosítása:__
+        - __Primitívek__ - (egyszerű típusok) melyek egyszerre csak egy adat tárolására alkalmasak
             - Szám - `Number`
                 - Ide tartozik a `NaN` érték is, ami a Not a Number rövidítése. Tehát ez nem egy típus, hanem, egy érték.
             - Szöveg - `String`
@@ -27,11 +27,11 @@
                 - lehetséges értékei, a `true` és a `false`
             - undefined - `undefined`
                 - Egyetlen értéket vehet fel, és ez az `undefined`
-        - Összetett Adattípusok, melyek egyszerre több adat tárolására alaklmasak
+        - __Összetett Adattípusok__, melyek egyszerre több adat tárolására alaklmasak
             - Az Object, mint adattípus
                - Array azaz Tömb: Fontos mehjegyezni, hogy Javascriptben, a tömb számára nincs külön adattípus. Az az Object-ből van származtatva, ám a gyakorlatban, úgy használjuk, mintha külön típus lenne.
 
-- __Operátorok__ - Melyek műveleteket hajtanak végre, az operandusaik közt, és visszatérnek a művelet eredményével.
+- __Operátorok:__ - Melyek műveleteket hajtanak végre, az operandusaik közt, és visszatérnek a művelet eredményével.
 
     - Az Operátorokat csoportosíthatjuk operandusaik száma szerint:
         - Egy operandusú `unary` 
@@ -52,7 +52,7 @@
        * `arrow function` - nyílfüggvény, rövidített függvény. `ES6 szintaxis`
     * `if-else` - feltételes mód
     * `switch-case` - szelekciós vezérlési szerkezet
-    * #### Ciklusok - Iterációk
+    * __Ciklusok__ - Iterációk
         - `for` - léptető ciklus
             - `for in`
             - `for of`
@@ -61,7 +61,7 @@
             - `do while` - hátúl tesztelő ciklus
     * `try-catch-finaly` - hibakezelés, kivételkezelés
     
-* __Változók hatásköre__ - Azt határozza meg, hogy meddig terjed egy változó láthatósága. Hogy hol érhetjük el az egyes hatókörökben definiált változókat.
+* __Változók hatásköre__ -Azt határozza meg, hogy meddig terjed egy változó láthatósága. Hogy hol érhetjük el az egyes hatókörökben definiált változókat.
 
 * __Sztringműveletek__ - Stringkezelő függvények
 * __Reguláris kifejezések__ -A reguláris kifejezés egy speciális mintázat, amely segít szövegek keresésében és feldolgozásában. Használatával egyszerűbbé válik az adatok ellenőrzése, szűrése vagy átalakítása a programozásban és a mindennapi feladatokban. Olyan esetekre ad megoldást, amikor nem tudjuk megnevezni a string összes jelét, hanem csak a stringet leíró "szabályokat" mint egy dátum esetén. A szabály világos: 4 szám, majd egy kötőjel, majd 2 szám, majd megint egy kötőjel, majd ismét 2 szám. Reguláris kifejezésben ez a következőképpen néz ki: `[0-9]{4}-[0-9]{2}-[0-9]{2}` Ez minden `YYYY-MM-DD` formátumú dátumot meghatároz. Kiváló lehetőség ürlapelemek validálására.
@@ -71,12 +71,12 @@
 - __A Spread syntax,__ avagy a `...` (másoló) operátor:
     - mely segítségével tömböket és objectecet tudunk ki és be csomagolni. Többek közt, lehetővé teszi két változó, harmadik változó ígénybevétele nélküli felcserélését.
 * __Halmaz műveletek:__
-    - A Set Object
+    - A `Set` Object
 * __Műveletek Object adattípussal__
     - A `Map` object - mely segítségével egyszerűen kezelhetjük a kulcs-érték párokat. Segíti a lekérdezést, hozzáadást, törlést...
 - __Referencia típusok:__ Menden olyan típus, ami a motorházfedél alatt Object. Ilyenek az `Object`, `Array`, és a `function` is
     - Ebben a fejezetben újra csoportosítjuk az adattípusokat. Hiszen nem csak értékük alapján lehet őket csoportosítani, hanem egy adott típus, hozzárendelésben való működése alapján is. 
-    > Amikor egy változó nem a konkrét értéket tárolja, hanem annak memóriacímét, azaz referenciáját. Javascripteb nem tudjuk meghatározni, hogy mi referencia, és mi nem. 
+    > Amikor egy változó nem a konkrét értéket tárolja, hanem annak memóriacímét, azaz referenciáját. Javascripteb nem tudjuk meghatározni, hogy mi legyen referencia, és mi nem. 
 * __A `Date` object__, avagy dátumok a Javascriptben
 
 ## 3. `DOM` (Document Object Modell) 
@@ -106,36 +106,41 @@
         - __A DOM, egy HTML elemre vonatkozó fontosabb attribútumai__
             - Ahol külömbséget teszünk a pusztán csomópont, és HTML csomópont viszonyítási pontok közt
             - Stíluslap (style) kezelése
-        - __Attribútumok kezelése__
+        - __Attribútumok kezelése__ 
+            - Szabványos HTML attribútumok közvetlen elérése, egy DOM elementen keresztül.(például: `HTMLElement.id`, `HTMLElement.src` vagy `HTMLElement.style`, ... stb.) 
+            - HTML attribútumok kezelése az `attribute` függvénycsaládon keresztül.
         - __Saját attríbútumok kezelése:__
             - A `dataset` - mely segítségével egy HTML elem adathordozóvá válik.
             > segítségével lehetőség nyílik, a HTML kóddal együtt, a hozzá tartozó adatok betöltésére is. Arra, hogy egy HTML szerkezet (például egy productbox egy webshopban) adatokat is hordozzon a HTML struktúra mellett.
     - __Eseménykezelés__ - mely keretén belül lehetőségünk van lekezelni, a HTML oldalon végbeneő eseményeket, mint az oldalbetöltés, egy billentyű lenyomása, vagy az egérkattintás.
         - Két fajta eseménykezelés létezik:
-            - Attribútum típusú eseménykezelés
-            - EventTarget-en keresztül való eseménykezelés
+            - Attribútum típusú eseménykezelés; - Amelyekkel főleg ES5 vagy régebbi szintaxisú JS kódban találkozhatunk. 
+            - EventTarget-en keresztül való eseménykezelés, a Javascript modern eseménykezelője.
     - A `DocumentFragment` - avagy hogyan tudunk a memóriába HTML struktúrákat építeni anélkül, hogy az építés alatt, újra, meg újra újrarajzolná, s így újraszámolná a weboldal elrendezését a böngésző, anélkül, hogy sok fölösleges erőforrát pazarolnánk el. Sokkal optimálisabb futásidőt, és stabílabb működést biztosítva weboldalinknak.
-        - gyakorlati megvalósítás template element-en keresztül: például amikor egy webshop termékkártyáját hozzuk létre. A memóriába rakjuk össze, és, amikor teljesen kész van, hozzáaadjuk a dokumentumunkhoz.
+    > gyakorlati megvalósítás `template` element-en keresztül: például amikor egy webshop termékkártyáját hozzuk létre. A memóriába rakjuk össze, és, amikor teljesen kész van, hozzáaadjuk a dokumentumunkhoz. Így csak egyszer rajzolja újra az aktuális HTML dokumentumot.
 
 ## 4. Struktúrális programozás
 ### Tervezési minták
 > Ahhoz, hogy a `3.` fejezetben elkezdett projekteket tovább tudjuk fejleszteni, szükségünk van arra a tudásra, melynek segítségével a kódjainkat, bizonyos modellek alapján rendszerezni, `strukturálni` tudjuk.
 
-* #### Függvénytárak 
-    - Melyek segítségével elkerülhetjük, bonyolult `if` elágazások, vagy `switch` vezérlési szerkezetek írását. A szakirodalomban, kontextus függvényében, ezt több néven is illetik, mint például: `Function Dispatch Table - függvénykiosztási tábla` röviden, függvénytárak; Ha az OOP világába költöztetjük ezt a mintát, akkor ez a `Strategy Pattern (Stratégia tervezési minta)`; Vagy, ha összetettebb feladatok végzésére használjuk, akkor ez a `Command Pattern (Parancs minta)`.
-    Összeséégében ez nem más, mint a `Nyílt/Zárt elv (Open/Closed Principle)`: Ahol a kód nyitott a bővítésre, de zárt a módosításra. Mindenz, egy nagyon hatékony és teljesítményorientált kódot tesz lehetővé, mely futás ideje, konstans értékű így kiszámítható, ellentétben a bonyolult, és hosszú switch vezérlési szerkezeteknél, melyek hatékonysága abban rejlik, hogy az adott ág, hól helyezkedik el a kódon belül.
-        - Vezérlők készítése
-* #### A `Closure` és az `Encapsulation` - Zárványok, Függvénygyárak
-    - Olyan függvények, melyek "emlékeznek" környezetükre azután is, hogy az őt létrehozó függvény befejezte futását. Ez kiemelten nagy adatbiztonságot jelent. Más szóval: A zárványt létrehozó függvény  praméterihez, és a benne létrehozott változókhoz, csak a zárványokon (Closure) keresztül férhetünk hozzá. Ez az `Encapsulation`
+* __Függvénytárak__ - Melyek segítségével elkerülhetjük, bonyolult `if` elágazások, vagy `switch` vezérlési szerkezetek írását. 
+    > A szakirodalomban, kontextus függvényében, ezt több néven is illetik, mint például: 
+    >   - `Function Dispatch Table - függvénykiosztási tábla` röviden, függvénytárak; 
+    >   - Ha az OOP világába költöztetjük ezt a mintát, akkor ez a `Strategy Pattern (Stratégia tervezési minta)`; 
+    >   - Vagy, ha összetettebb feladatok végzésére használjuk, akkor ez a `Command Pattern (Parancs minta)`.
+
+    - Gyakorlat: - Vezérlők készítése
+* #### A `Closure` és az `Encapsulation` 
+    - __Zárványok, Függvénygyárak__ - Olyan függvények, melyek "emlékeznek" környezetükre azután is, hogy az őt létrehozó függvény befejezte futását. Ez kiemelten nagy adatbiztonságot jelent. Más szóval: A zárványt létrehozó függvény  praméterihez, és a benne létrehozott változókhoz, csak a zárványokon (Closure) keresztül férhetünk hozzá. Ez az `Encapsulation`
     
 
 * #### `Module Pattern` 
-    - A moduláris programozás - mely segítségével lehetőségünk nyílik, a kódunk egyes részeit a többitől elkülöníteni, és függetleníteni. Ezzel lehetőségünk nyílik az egyes mechanizmusok szétválasztására, ami a kód átláthatóságát, karbantarthatóságát, és továbbfejleszthetőségét segíti elő. Nem utolsó sorban, egy modul nemcsak átláthatóságot, továbbfejleszthetőséget, és karbantarthatóságot biztosít, hanem mobilitást is, hiszen a modulok, projktről, projekre hordozhatóak, ami egy újabb fejlesztés produktivitását biztosítja.
+    - __A moduláris programozás__ - mely segítségével lehetőségünk nyílik, a kódunk egyes részeit a többitől elkülöníteni, és függetleníteni. Ezzel lehetőségünk nyílik az egyes mechanizmusok szétválasztására, ami a kód átláthatóságát, karbantarthatóságát, és továbbfejleszthetőségét segíti elő. Nem utolsó sorban, egy modul nemcsak átláthatóságot, továbbfejleszthetőséget, és karbantarthatóságot biztosít, hanem mobilitást is, hiszen a modulok, projktről, projekre hordozhatóak, ami egy újabb fejlesztés produktivitását biztosítja.
 
-    Itt beszélni fogunk:
-    - Hagyomásnyos függvény alapu modulokról
-            - A felefedő modul modell
-        - `ES6 modules` - A `module` mód - Aminek segítségével, Javascript állományok publikus interfészeit tudjuk egymásba ágyazni.
+    __Itt beszélni fogunk:__
+    - __Hagyomásnyos függvény alapu modulokról__
+        - A felefedő modul modell
+    - `ES6 modules` - A `module` mód - Aminek segítségével, Javascript állományok publikus interfészeit tudjuk egymásba ágyazni.
             - `export`
             - `import`
     >Érdekesség: Voltaképpen minden modul egy Closure :) Csak egy kicsit más megközelítésben.
@@ -161,7 +166,6 @@
 
 - Osztály szerkezete
     - Osztályok tulajdonságai és metódusai
-- `function` - prototype alapú osztálydefiníció
 - `class` alapú osztálydefiníció 
     - Setter és Getter függvények
     - `private` változók és függvények
@@ -169,34 +173,41 @@
 - Osztályok származtatása - öröklődés
 - Nyílfüggvények objektumokban való viselkedése, függvények objektumokhoz való tapadásának szabályai
 - A `OOP` és a `DOM`
-- ##### Gyakorlati példák, feladatok megvalósítása OOP-vel
+- __Gyakorlati példák, feladatok megvalósítása OOP-vel__
+- __ES6 modulok, melyek osztályokat implementálnak.__ - Segítségükkel minden osztály definíció saját, és __védett__ ökoszisztémával fog rendelkezni, ami nem szennyezi a globális környezetet. Ez egységes kódstruktúrákat hoz létre, mely nagyaban segíti nagyobb projektek átláthatóságát, karbantarthatóságát és továbbfejleszthetőségét, megtisztítva az osztályokat a fölösleges statikus terheléstől.
 
 ## 8. `AJAX` - Asynchron Javascript And XML
-### Adatok lekérése más szerveren lévő adatbázisból.
+    - Amely aszinkron adatcserét tesz lehetővé a kliens és a szerver között a weboldal újratöltése nélkül. Többek közt ez az a technológia, tette lehetővé, hogy a weboldalakból „webalkalmazások” váljanak (mint a Gmail vagy a Facebook), ahol a felület folyamatosan frissül anélkül, hogy a böngésző fehér képernyővel villanna minden kattintásnál.
 
-> Itt egy gyakorlati példa erejéig egy nagyobb hangszer adatbázisból kérünk le hangszer adatokat. A böngészőből kéréseket küldünk a szerver felé, amelynek válaszát utána feldolgozzuk és megjelenítjük a felhasználónak. Ez újabb oldalletöltés nélkül megy végbe, `AJAX` felhasználásával.
+    - Összességében az AJAX az a „láthatatlan híd”, ami összeköti a böngésződben futó kódot a távoli szerveren lévő adatokkal, folyamatos élményt biztosítva.
 
 >[!NOTE]
 > Ebben a fejezetben nemcsak a programozásban való megvalósításáról lesz szó, hanem szó esik többek közt:
 > - Az URL szerkezetéről
 > - A kérés szerkezetéről, mely a kérésben küldött adatok mellett, sok fejléc adat is utazik.
-> - stb. ...
+> - és a kérés törzséről, melyeben a konkrét adatok utaznak `POST` típusu kérések esetén.
 
-- Időzített scriptek - a javascript több szálon való kezelése - belépés az `AJAX` világába.
+- __Időzített scriptek__ - a javascript több szálon való kezelése - belépés az `AJAX` világába.
     - `setTimeout`
     - `setInterval`
-- Az `XMLHttpRequest`
+- __A `fetch` api__  - amit (régebben az `XMLHttpRequest` segítségével valósítottunk meg)
     - Kérések küldése távoli erőforrásra
     - Válasz fogadása és feldolgozása és megjelenítése
-- `JSON` - (JavaScript Object Notation, JavaScript objektumjelölés)
+- `JSON` - (JavaScript Object Notation, JavaScript objektumjelölés) 
+    > ez az adatformátum teszi lehetővé a kilens (böngésző) és szerver közti adatcserét. A `JSON` váltotta fel a korábbi `XML` adat struktúrát.
     - Javascript nyelven alapuló, olvasható adastruktúra, melyet többek közt, kliens-szerver közti adatcsere megvalósítására használunk.
     - A `JSON` függvényei:
         - `parse` - mely segítségével a szövegként érkezett JSON adatstruktúrát használható formára hozzuk.
         - `stringify` - mely segítségével szöveggé alakítjuk a JSON-t. Ebben a formában tudjuk tartósan tárolni, vagy akár egy kérésben a szerver felé továbbítani.
 - a `Promise` - Mint igéret, melyet 2 forgatókönyv jellemez.
-    - Mi történjen akkor, ha az ígéretet sikerült teljesíteni
-    - Mi történjen akkor, ha az ígéret nem teljesült.
-- A `Fetch` API - Ami egy `Promise` alapú kérés kezdeményezését teszi lehetővé.
+    > Amire szükség van a modern Javascript alapú programozásban, már csak annál az aprócska ténynél is fogva, hogy megértsük a `fetch` api tényleges működését, hiszen a `fetch` is egy `Promise`-al tér vissza.
+    - __A promis két forgatókönyvet valósít meg:__
+        - Mi történjen akkor, ha az ígéretet sikerült teljesíteni
+        - Mi történjen akkor, ha az ígéret nem teljesült.
+### Asynchron függvények
+
+- __Az `async` és az `await`__ - Segítségükkel lehetőségünk nyílik kikerülni a callback szintű megközelítést a `then` és `catch` ágakban. Helyettük egy `async` függvényben az `await` segítségével, a korábban megszokott lineáris programozási stílust valósíthatjuk meg, ahol a hibák elkapását a korábban tanult egyszerű `try - catch` vezérlési szerkezetben kaphatjuk el.
+
 
 # 9. `Optimalizálás`
 Ebben a fejezetben bepillantunk a javascript futtató környezetébe, abba a mechanizmusban, ahogy a Javascript sorba állítja az épp futásra váró proceszeket. Mivel a Javascript egy szálon fut, előfordulhat, hogy beragad egy-egy hoszabban tartó függvény, vagy ciklus, amit egy helyes optimalizálással, ki tudunk küszöbölni.
