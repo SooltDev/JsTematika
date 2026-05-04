@@ -2,7 +2,7 @@
 
 ## 1. JavaScript `(ECMAScript, ES6)` alapok
 > [!NOTE]
-> Az `ES6` után több új szabvány is megkjelent, mégis, azért emeljük ki pont ezt a verziót, és nem valamelyik későbbit, mert ez volt a "nagy" vízválasztó, melyben nem csupán náhány függvénnyel, vagy osztályal bővült a Javascript, hanem olyan radikális változásokat hozott, mint a változók hatáskörének kibővítése vagy az OOP nagy átalakulása.
+> Az `ES6` után több új szabvány is megjelent, mégis azért emeljük ki pont ezt a verziót, és nem valamelyik későbbit, mert ez volt a "nagy" vízválasztó, melyben nem csupán náhány függvénnyel, vagy osztályal bővült a Javascript, hanem olyan radikális változásokat hozott, mint a változók hatáskörének kibővítése vagy az OOP nagy átalakulása, vagy a modul módban való programozás.
 
 - Mi is az a JavaScript?
 - A JavaScript eredete és felhasználási lehetőségei
@@ -15,10 +15,10 @@
 
 ## 2. A programozás alapjai `Javascript` nyelven
 > [!NOTE]
->Ebben a részben elsajáítjuk a programozás alapjait. Ha ezt megérted, akkor a többi programnyelvvel is boldogulni fogsz, hiszen a logikája minden programozási nyelvnek hasonló. Természetesen ezeken az órákon bemutatjuk a JavaScript programozás sajátosságait is.
+>Ebben a részben elsajáítjuk a programozás alapjait. Ha ezt megérted, akkor a többi programnyelvvel is boldogulni fogsz, hiszen a logikája minden programozási nyelvnek hasonló. Természetesen ezeken az órákon a Javascript szemszögéből.
 
 - Típusok, változó, állandok
-    - #### Típusok csoportosítása:
+    - ### Típusok csoportosítása:
         - Primitívek - (egyszerű típusok) melyek egyszerre csak egy adat tárolására alkalmasak
             - Szám - `Number`
                 - Ide tartozik a `NaN` érték is, ami a Not a Number rövidítése. Tehát ez nem egy típus, hanem, egy érték.
@@ -31,23 +31,21 @@
             - Az Object, mint adattípus
                - Array azaz Tömb: Fontos mehjegyezni, hogy Javascriptben, a tömb számára nincs külön adattípus. Az az Object-ből van származtatva, ám a gyakorlatban, úgy használjuk, mintha külön típus lenne.
 
-- Operátorok - Melyek műveleteket hajtanak végre, az operandusaik közt, és visszatérnek a művelet eredményével.
+- __Operátorok__ - Melyek műveleteket hajtanak végre, az operandusaik közt, és visszatérnek a művelet eredményével.
 
     - Az Operátorokat csoportosíthatjuk operandusaik száma szerint:
         - Egy operandusú `unary` 
         - Két operandusú `binary`
         - Három operandusú `thernary`
-Vagy 
-
     - Az általa elvégzett művelet típusa szerint:
-        - Aritmetikai műveletek végző operátorok
+        - Aritmetikai műveleteket végző operátorok
         - Hozzárendelő vagy értékadó operátorok
         - Összehasonlító operátorok
         - Logikai operátorok
         - Léptető operátorok
 
-- Típuskonverzió - Gyakran van szükség arra, hogy egy változó értékét valami más típusú értékké alakítsuk át. Páldául, amikor egy szám szövegként van definiálva, ekkor ezt a szöveget, ami számot tartalmaz, át kell alakítani, számmá. Ez az átalakítás a típuskonverzió.
-- A `Math` object - A Math tartalmazza, a komplekszebb matematikai műveletek elvégzéséhez szükséges függvényeket, mint például a trigonometriai függvényeket, krekítéseket, vagy a gyökvonást és a konstans matematikai értékek is itt vannak tárolva, mint a PI érték. (Amolyan tudományos számológépként lehet használni)
+- __Típuskonverzió__ - Gyakran van szükség arra, hogy egy változó értékét valami más típusú értékké alakítsuk át. Páldául, amikor egy szám szövegként van definiálva, ekkor ezt a szöveget, ami számot tartalmaz, át kell alakítani, számmá. Ez az átalakítás a típuskonverzió.
+- __A Math object__ - A Math tartalmazza, a komplekszebb matematikai műveletek elvégzéséhez szükséges függvényeket, mint például a trigonometriai függvényeket, krekítéseket, vagy a gyökvonást és a konstans matematikai értékek is itt vannak tárolva, mint a PI érték. (Amolyan tudományos számológépként lehet használni)
 
 * ####  Vezérlési szerkezetek
     * `function` - Függvények - Amelyek nem mások, mint programba írt programok, melyeket akárhányszor fel tudunk használni (futtatni) a programunkon belül. 
@@ -63,22 +61,23 @@ Vagy
             - `do while` - hátúl tesztelő ciklus
     * `try-catch-finaly` - hibakezelés, kivételkezelés
     
-* #### Változók hatásköre
-* #### Sztringműveletek
-    - Stringkezelő függvények
-* #### Reguláris kifejezések
+* __Változók hatásköre__ - Azt határozza meg, hogy meddig terjed egy változó láthatósága. Hogy hol érhetjük el az egyes hatókörökben definiált változókat.
 
-* #### Tömbműveletek:
+* __Sztringműveletek__ - Stringkezelő függvények
+* __Reguláris kifejezések__ -A reguláris kifejezés egy speciális mintázat, amely segít szövegek keresésében és feldolgozásában. Használatával egyszerűbbé válik az adatok ellenőrzése, szűrése vagy átalakítása a programozásban és a mindennapi feladatokban. Olyan esetekre ad megoldást, amikor nem tudjuk megnevezni a string összes jelét, hanem csak a stringet leíró "szabályokat" mint egy dátum esetén. A szabály világos: 4 szám, majd egy kötőjel, majd 2 szám, majd megint egy kötőjel, majd ismét 2 szám. Reguláris kifejezésben ez a következőképpen néz ki: `[0-9]{4}-[0-9]{2}-[0-9]{2}` Ez minden `YYYY-MM-DD` formátumú dátumot meghatároz. Kiváló lehetőség ürlapelemek validálására.
+* __ömbműveletek:__
     - Tömbkezelő függvények
     - A tömbök magasabb rendű függvényei
-- #### A Spread syntax, avagy a `...` (másoló) operátor:
+- __A Spread syntax,__ avagy a `...` (másoló) operátor:
     - mely segítségével tömböket és objectecet tudunk ki és be csomagolni. Többek közt, lehetővé teszi két változó, harmadik változó ígénybevétele nélküli felcserélését.
-* #### Halmaz műveletek:
+* __Halmaz műveletek:__
     - A Set Object
-* #### Műveletek Object adattípussal
-- #### Referencia típusok:
+* __Műveletek Object adattípussal__
+    - A `Map` object - mely segítségével egyszerűen kezelhetjük a kulcs-érték párokat. Segíti a lekérdezést, hozzáadást, törlést...
+- __Referencia típusok:__ Menden olyan típus, ami a motorházfedél alatt Object. Ilyenek az `Object`, `Array`, és a `function` is
     - Ebben a fejezetben újra csoportosítjuk az adattípusokat. Hiszen nem csak értékük alapján lehet őket csoportosítani, hanem egy adott típus, hozzárendelésben való működése alapján is. 
-* #### A `Date` object, avagy dátumok a Javascriptben
+    > Amikor egy változó nem a konkrét értéket tárolja, hanem annak memóriacímét, azaz referenciáját. Javascripteb nem tudjuk meghatározni, hogy mi referencia, és mi nem. 
+* __A `Date` object__, avagy dátumok a Javascriptben
 
 ## 3. `DOM` (Document Object Modell) 
 #### Javascript alkalmazása front-enden
@@ -90,27 +89,28 @@ Vagy
 
 - `DOM` (Document Object Model)
     - DOM szerkezet
-    - Csomópontok (Node)
+    - __Csomópontok__ (Node)
         - Text
         - HtmlElement
     - a `document` object
-    - DOM műveletek - HTML elemek manipulálása, Javascript segítségével
+    - __DOM műveletek__ - HTML elemek manipulálása, Javascript segítségével
         - a children és a childnode
             - köztük levő különbség
-        - DOM kezelő függvények
+        - __DOM kezelő függvények__
             - egy HTML elem elérése
                 - Hagyományos módszerrel, mint pl a `.getElementById`
                 - Modern módszer, avagy a `.querySelector` és a `.querySelectorAll`, melyek segítségével egy CSS selector alapján tudunk eg vagy akár több elemt kiválasztani.
                   >[!NOTE] Többek közt ez az `ES6` újítás ásta alá a `jQuery` létjogosultságát, mert most már nem szükséges a jQuery használata a CSS selectorok alapján történő HTML elemek kiválasztásához.
             - a `document` object-en keresztül elérhető függvények
             - Egy Text, vagy HTMLElement csomóponton keresztül elérhető függvények
-        - A DOM, egy HTML elemre vonatkozó fontosabb attribútumai
+        - __A DOM, egy HTML elemre vonatkozó fontosabb attribútumai__
             - Ahol külömbséget teszünk a pusztán csomópont, és HTML csomópont viszonyítási pontok közt
             - Stíluslap (style) kezelése
-        - Attribútumok kezelése
-        - Saját attríbútumok kezelése:
-            - A `dataset` 
-    - Eseménykezelés - mely keretén belül lehetőségünk van lekezelni, a HTML oldalon végbeneő eseményeket, mint az oldalbetöltés, egy billentyű lenyomása, vagy az egérkattintás.
+        - __Attribútumok kezelése__
+        - __Saját attríbútumok kezelése:__
+            - A `dataset` - mely segítségével egy HTML elem adathordozóvá válik.
+            > segítségével lehetőség nyílik, a HTML kóddal együtt, a hozzá tartozó adatok betöltésére is. Arra, hogy egy HTML szerkezet (például egy productbox egy webshopban) adatokat is hordozzon a HTML struktúra mellett.
+    - __Eseménykezelés__ - mely keretén belül lehetőségünk van lekezelni, a HTML oldalon végbeneő eseményeket, mint az oldalbetöltés, egy billentyű lenyomása, vagy az egérkattintás.
         - Két fajta eseménykezelés létezik:
             - Attribútum típusú eseménykezelés
             - EventTarget-en keresztül való eseménykezelés
@@ -223,4 +223,4 @@ Ebben a fejezetben bepillantunk a javascript futtató környezetébe, abba a mec
 >
 > * Tanfolyam közben: órai tesztek
 >
-> * Folytatás: a 14. hét után TypeScript modul, melynek végén külön vizsga van
+> * Folytatás: a 15. hét után TypeScript modul, melynek végén külön vizsga van
