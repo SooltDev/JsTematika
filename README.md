@@ -65,7 +65,7 @@
 
 * __Sztringműveletek__ - Stringkezelő függvények
 * __Reguláris kifejezések__ -A reguláris kifejezés egy speciális mintázat, amely segít szövegek keresésében és feldolgozásában. Használatával egyszerűbbé válik az adatok ellenőrzése, szűrése vagy átalakítása a programozásban és a mindennapi feladatokban. Olyan esetekre ad megoldást, amikor nem tudjuk megnevezni a string összes jelét, hanem csak a stringet leíró "szabályokat" mint egy dátum esetén. A szabály világos: 4 szám, majd egy kötőjel, majd 2 szám, majd megint egy kötőjel, majd ismét 2 szám. Reguláris kifejezésben ez a következőképpen néz ki: `[0-9]{4}-[0-9]{2}-[0-9]{2}` Ez minden `YYYY-MM-DD` formátumú dátumot meghatároz. Kiváló lehetőség ürlapelemek validálására.
-* __ömbműveletek:__
+* __Tömbműveletek:__
     - Tömbkezelő függvények
     - A tömbök magasabb rendű függvényei
 - __A Spread syntax,__ avagy a `...` (másoló) operátor:
